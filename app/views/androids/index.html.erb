@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Android nang Bayan Inc.</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+          </tr>
+  </thead>
+
+  <tbody>
+    <% @androids.each do |android| %>
+    <% unless android.no_of_stock == 0 %>
+      <tr>
+	<td><a> <%=  %></a><%= link_to android.name, android %></td>
+      	<td><a> <%=  %></a><%= link_to android.no_of_stock, android %></td>
+	<td><a href="androids/<%=android.id%>/sold "> SOLD ONE </a></td>
+      </tr>
+    <% end %>
+
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Android', new_android_path %>

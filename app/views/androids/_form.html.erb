@@ -1,0 +1,65 @@
+<%= form_with(model: android, local: true) do |form| %>
+  <% if android.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(android.errors.count, "error") %> prohibited this android from being saved:</h2>
+
+
+
+      <ul>
+      <% android.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<h1>Android nang Bayan Inc.</h1>
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :brand %>
+    <%= form.text_field :brand %>
+  </div>
+
+  <div class="field">
+    <%= form.label :year_released %>
+    <%= form.date_select :year_released %>
+  </div>
+
+  <div class="field">
+    <%= form.label :camera %>
+    <%= form.text_field :camera %>
+  </div>
+
+  <div class="field">
+    <%= form.label :mpixel %>
+    <%= form.text_field :mpixel %>
+  </div>
+
+  <div class="field">
+    <%= form.label :internal_memory %>
+    <%= form.text_field :internal_memory %>
+  </div>
+
+  <div class="field">
+    <%= form.label :no_of_sim_slots %>
+    <%= form.number_field :no_of_sim_slots %>
+  </div>
+
+  <div class="field">
+    <%= form.label :size_of_screen %>
+    <%= form.text_field :size_of_screen %>
+  </div>
+
+  <div class="field">
+    <%= form.label :no_of_stock %>
+    <%= form.number_field :no_of_stock %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

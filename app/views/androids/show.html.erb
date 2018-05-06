@@ -1,0 +1,52 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @android.name %>
+</p>
+
+<p>
+  <strong>Brand:</strong>
+  <%= @android.brand %>
+</p>
+
+<p>
+  <strong>Year released:</strong>
+  <%= @android.year_released %>
+</p>
+
+<p>
+  <strong>Camera:</strong>
+  <%= @android.camera %>
+</p>
+
+<p>
+  <strong>Mpixel:</strong>
+  <%= @android.mpixel %>
+</p>
+
+<p>
+  <strong>Internal memory:</strong>
+  <%= @android.internal_memory %>
+</p>
+
+<p>
+  <strong>No of sim slots:</strong>
+  <%= @android.no_of_sim_slots %>
+</p>
+
+<p>
+  <strong>Size of screen:</strong>
+  <%= @android.size_of_screen %>
+</p>
+
+<p>
+  <strong>No of stock:</strong>
+  <%= @android.no_of_stock %>
+</p>
+
+
+
+<%= link_to 'Edit', edit_android_path(@android) %> |
+<td><%= link_to 'Destroy', android_path, method: :delete, data: { confirm: 'Are you 		sure?' } %></td>|
+<%= link_to 'Back', androids_path %>
